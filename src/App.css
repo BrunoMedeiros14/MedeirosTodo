@@ -39,6 +39,7 @@
 
 .main {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   align-items: center;
   justify-content: space-between;
@@ -46,6 +47,7 @@
 }
 
 .selectionBox {
+  flex-grow: 1;
   width: 140px;
   height: 40px;
   border-radius: 10px;
@@ -58,6 +60,16 @@
 
 .selectionBox>option:hover {
   background-color: red;
+}
+
+@media (min-width: 500px) {
+  .main {
+    flex-wrap: nowrap;
+  }
+
+  .selectionBox {
+    flex-grow: 0;
+  }
 }
 
 @media (min-width: 775px) {

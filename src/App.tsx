@@ -41,14 +41,6 @@ function App(): ReactElement {
                 </option>
               ))}
             </select>
-            {/* <Select
-              defaultValue={selectedOption}
-              onChange={e => setSelectedOption(e!)}
-              options={options}
-              value={selectedOption}
-              className='selectionBox'
-              classNamePrefix='selectionBox'
-            /> */}
             <ThemeButton />
           </div>
         </div>
