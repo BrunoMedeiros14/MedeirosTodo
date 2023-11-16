@@ -10,6 +10,14 @@
   display: flex;
 }
 
+.flex.space-between {
+  justify-content: space-between;
+}
+
+.flex.gap-3 {
+  gap: 16px;
+}
+
 .flex-col {
   flex-direction: column;
 }

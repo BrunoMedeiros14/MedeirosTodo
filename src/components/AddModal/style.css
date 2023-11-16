@@ -1,0 +1,57 @@
+.modalBg {
+  display: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  background-color: var(--dark-primary);
+  border: solid var(--light);
+  margin-top: 96px;
+  padding: 24px 16px;
+  border-radius: 10px;
+  height: 380px;
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: modalAppear 0.5s ease-out;
+}
+
+.modalBg.active {
+  display: flex;
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.button {
+  width: 100%;
+}
+
+
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

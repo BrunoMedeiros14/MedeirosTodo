@@ -3,6 +3,8 @@ import './App.css';
 import Search from './components/Search/index';
 import ThemeButton from './components/ThemeButton';
 import Todo from './components/Todo/index';
+import AddModal from './components/AddModal';
+import CustomButton from './CustomButton';
 
 interface IfilterOption {
   value: string;
@@ -17,6 +19,8 @@ function App(): ReactElement {
   const [selectedOption, setSelectedOption] = useState<IfilterOption>(
     options[0]
   );
+
+  const [modalVisibility, setModalVisibility] = useState<boolean>(false);
 
   return (
     <>
@@ -48,7 +52,15 @@ function App(): ReactElement {
           <Todo />
           <Todo />
           <Todo />
+          <CustomButton
+            label='teste'
+            onClick={() => setModalVisibility(!modalVisibility)}
+          />
         </div>
+        <AddModal
+          closeModal={() => setModalVisibility(false)}
+          visible={modalVisibility}
+        />
       </div>
     </>
   );
