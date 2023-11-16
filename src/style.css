@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap');
 
+:root {
+  --md-display: 767.98px;
+  --dark-primary-rgb: 0, 15, 15;
+  --dark-primary: rgb(var(--dark-primary-rgb));
+  --dark-secondary-rgb: 48, 64, 62;
+  --dark-secondary: rgb(var(--dark-secondary-rgb));
+
+  --primary-rgb: 215, 103, 4;
+  --primary: rgb(var(--primary-rgb));
+  --secondary-rgb: 217, 127, 48;
+  --secondary: rgb(var(--secondary-rgb));
+
+  --light-rgb: 242, 242, 242;
+  --light: rgb(var(--light-rgb));
+
+  --green-rgb: 4, 215, 113;
+  --green: rgb(var(--green-rgb));
+  --red-rgb: 217, 5, 5;
+  --red: rgb(var(--red-rgb));
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 0;
   font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--dark-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fillRule='evenodd'%3E%3Cg fill='%23f2f2f2' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }

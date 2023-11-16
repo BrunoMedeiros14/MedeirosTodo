@@ -1,0 +1,68 @@
+.text-center {
+  text-align: center;
+}
+
+.mt-5 {
+  margin-top: 32px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.head {
+  width: 90%;
+  gap: 24px;
+}
+
+.container {
+  width: 100vw;
+  background-color: var(--dark-secondary);
+  margin-inline: auto;
+  min-height: 100vh;
+  color: var(--light);
+  padding: 8px;
+}
+
+.title {
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.selectionBox {
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: var(--light);
+  font-weight: 500;
+  background-color: var(--primary);
+}
+
+.selectionBox>option:hover {
+  background-color: red;
+}
+
+@media (min-width: 775px) {
+  .container {
+    max-width: 1300px;
+    width: 70vw;
+  }
+}

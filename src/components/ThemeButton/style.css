@@ -1,0 +1,13 @@
+.themeButton {
+  background-color: var(--primary);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.themeButton:disabled {
+  background-color: var(--secondary);
+  opacity: .6;
+  cursor: default;
+}

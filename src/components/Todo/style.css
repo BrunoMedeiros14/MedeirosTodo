@@ -1,0 +1,103 @@
+.todo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-inline: auto;
+  padding: 16px 8px;
+}
+
+.todo:hover {
+  background-color: rgba(var(--primary-rgb), .1);
+  transition: background-color ease-in-out .2s;
+}
+
+.todo:hover button {
+  opacity: 1;
+  transition: opacity ease-in-out .2s;
+}
+
+.todo:not(:last-child) {
+  border-bottom: solid var(--primary) 2px;
+}
+
+.todo>input {
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+
+  transition: background-color ease-in-out .2s;
+  border: 0.15em solid var(--primary);
+  outline: none;
+  cursor: pointer;
+}
+
+.todo input[type="checkbox"]:checked {
+  background-color: var(--primary);
+  position: relative;
+}
+
+.todo input[type="checkbox"]:checked::before {
+  content: "\2714";
+  font-size: 1.5em;
+  color: var(--light);
+  position: absolute;
+  left: 18%;
+  top: -2%;
+}
+
+.todo input[type="checkbox"]:disabled {
+  border-color: #c0c0c0;
+  background-color: #c0c0c0;
+}
+
+.todo input[type="checkbox"]:disabled+span {
+  color: #c0c0c0;
+}
+
+.todo input[type="checkbox"]:focus {
+  box-shadow: 0 0 20px var(--primary);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons>button {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--light);
+  opacity: 0;
+}
+
+.editButton>svg {
+  height: auto;
+  width: 18px;
+  top: 1px;
+  position: relative;
+}
+
+.removeButton>svg {
+  height: auto;
+  width: 20px;
+}
+
+.editButton:hover path {
+  stroke: var(--primary);
+  transition: stroke ease-in-out .2s;
+}
+
+.removeButton:hover path {
+  stroke: var(--red);
+  transition: stroke ease-in-out .2s;
+}
+
+.textDiv {
+  flex-grow: 2;
+}
