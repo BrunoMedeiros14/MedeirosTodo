@@ -4,12 +4,18 @@ interface ICustomButton {
   className?: string;
   label: string;
   onClick: () => any;
+  type?: 'submit' | 'reset' | 'button';
 }
 
-const CustomButton = ({ className, label, onClick }: ICustomButton) => {
+const CustomButton = ({
+  className,
+  label,
+  onClick,
+  type = 'button',
+}: ICustomButton) => {
   return (
     <button
-      type='button'
+      type={type}
       onClick={onClick}
       title={className}
       className={className}>

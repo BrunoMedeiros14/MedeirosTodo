@@ -25,6 +25,24 @@
   animation: modalAppear 0.5s ease-out;
 }
 
+.cancelButton {
+  background-color: var(--dark-primary);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.cancelButton:hover {
+  background-color: var(--dark-primary);
+  color: var(--light);
+  transition: color ease-in-out .2s;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+.cancelButton:active {
+  background-color: rgba(var(--primary-rgb), 0.8);
+  color: var(--light);
+}
+
 .modalBg.active {
   display: flex;
 }
@@ -42,6 +60,19 @@
   width: 100%;
 }
 
+
+.invalid-feedback {
+  display: none;
+}
+
+.was-validated .input:invalid~.invalid-feedback {
+  display: block;
+  color: #dc3545;
+}
+
+.was-validated .input:invalid {
+  border-color: #dc3545;
+}
 
 
 @keyframes modalAppear {
